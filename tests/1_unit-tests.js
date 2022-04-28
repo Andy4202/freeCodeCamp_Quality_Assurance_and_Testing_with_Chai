@@ -93,7 +93,7 @@ suite('Unit Tests', function () {
       // assert.fail(Math.PI, 3);
       // assert.fail(1 - Math.random(), 1);
       assert.isAtMost('hello'.length, 5);
-      assert.isAbovel(1, 0);
+      assert.isAbove(1, 0);
       assert.isAbove(Math.PI, 3);
       assert.isAtMost(1 - Math.random(), 1);
 
