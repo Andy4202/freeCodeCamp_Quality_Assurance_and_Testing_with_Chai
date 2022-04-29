@@ -26,10 +26,12 @@ suite('Functional Tests', function () {
     test('Test GET /hello with your name', function (done) {
       chai
         .request(server)
-        .get('/hello?name=xy_z')
+        .get('/hello?name=<your_name>')
         .end(function (err, res) {
-          assert.fail(res.status, 200);
-          assert.fail(res.text, 'hello xy_z');
+          assert.equal(res.status, 200);
+          assert.equal(res.text, 'hello <your_name>');
+          // assert.fail(res.status, 200);
+          // assert.fail(res.text, 'hello xy_z');
           done();
         });
     });
